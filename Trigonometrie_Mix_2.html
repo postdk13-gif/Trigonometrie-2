@@ -266,7 +266,7 @@ function render(){
     t.parts.forEach((p,j)=>{
       if(p.type==="num"){
         html += `<div class="field"><label for="in${i}_${j}">${p.label||"Ergebnis:"}</label>
-          <input type="text" inputmode="decimal" autocomplete="off" id="in${i}_${j}">
+          <input type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" id="in${i}_${j}">
           ${p.unit?`<span class="unit">${p.unit}</span>`:""}</div>`;
       } else {
         html += `<div class="mc" role="group" aria-label="Antwortmöglichkeiten">${p.options.map((o,k)=>
